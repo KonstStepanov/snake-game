@@ -1,0 +1,89 @@
+body {
+    background-color: #b1afaf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+}
+
+#score, #high-score {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#start-button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #1aba25;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+    border: 2px solid #000;
+}
+
+.snake-head {
+    position: relative;
+    background-color: #9a521b;
+}
+
+.snake-head::before,
+.snake-head::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #FF0000FF;
+    border-radius: 50%;
+}
+
+.snake-head::before {
+    top: 4px;
+    left: 4px;
+}
+
+.snake-head::after {
+    top: 4px;
+    right: 4px;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    font-size: 36px;
+    font-weight: bold;
+    color: #FF0000FF;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+#score-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 64px;
+}
+
+#score-container span {
+    background-color: #000000;
+    color: #FF0000FF;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
